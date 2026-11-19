@@ -2,17 +2,27 @@ let isModalOpen = false;
 let contrastToggle = false;
 const scaleFactor = 1 / 20;
 
+let shapes = null; // looked up on first use, after the page has loaded
+const canHover = window.matchMedia("(hover: hover) and (pointer: fine)");
+let shapeFrame = false;
+
 function moveBackground(event) {
-  const shapes = document.querySelectorAll(".shape");
+  // Touch screens fire fake mouse events on tap, so skip them entirely
+  if (!canHover.matches || shapeFrame) return;
+  shapeFrame = true;
+  if (!shapes) shapes = document.querySelectorAll(".shape");
   const x = event.clientX * scaleFactor;
   const y = event.clientY * scaleFactor;
 
-  for (let i = 0; i < shapes.length; ++i) {
-    const isOdd = i % 2 !== 0;
-    const boolInt = isOdd ? -1 : 1;
-    // Added rotate after tutorial
-    shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px) rotate(${x * boolInt * 10}deg)`
-  }
+  requestAnimationFrame(() => {
+    for (let i = 0; i < shapes.length; ++i) {
+      const isOdd = i % 2 !== 0;
+      const boolInt = isOdd ? -1 : 1;
+      // Added rotate after tutorial
+      shapes[i].style.transform = `translate(${x * boolInt}px, ${y * boolInt}px) rotate(${x * boolInt * 10}deg)`;
+    }
+    shapeFrame = false;
+  });
 }
 
 function toggleContrast() {

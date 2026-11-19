@@ -640,6 +640,8 @@ footer {
 */
 .shape {
   position: fixed;
+  pointer-events: none; /* never block taps or scrolling */
+  will-change: transform;
 }
 .shape--0 {
   top: 15vh;
@@ -745,5 +747,24 @@ footer {
   }
   .modal__half {
     padding: 40px;
+  }
+}
+
+/* Touch devices and small screens: no mouse-follow effect.
+   Shapes become a static, faint decoration that scrolls away with the
+   landing section instead of sitting on top of the page. */
+@media (hover: none), (pointer: coarse), (max-width: 768px) {
+  #landing-page {
+    position: relative;
+    overflow: hidden;
+  }
+  .shape {
+    position: absolute;
+    width: 56px;
+    height: auto;
+    opacity: 0.35;
+    z-index: -1;
+    transform: none !important;
+    will-change: auto;
   }
 }
