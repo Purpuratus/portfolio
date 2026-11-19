@@ -569,6 +569,64 @@ nav {
   margin: 16px 0;
 }
 
+
+/* Always-visible project captions */
+.project__caption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.project__caption--title {
+  font-size: 28px;
+}
+
+.project__caption--stack {
+  margin-top: 4px;
+  opacity: 0.7;
+}
+
+.project__caption--buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.project__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid #242424;
+  color: #242424;
+  transition: all 300ms ease;
+}
+
+.project__btn--live {
+  background-color: #242424;
+  color: white;
+}
+
+.project__btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.85;
+}
+
+.dark-theme .project__btn {
+  border-color: white;
+  color: white;
+}
+
+.dark-theme .project__btn--live {
+  background-color: white;
+  color: #242424;
+}
+
 /* 
 
   FOOTER 
