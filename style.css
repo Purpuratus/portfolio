@@ -479,11 +479,20 @@ nav {
 
 .modal__exit {
   position: absolute;
-  top: 30px;
-  right: 40px;
+  top: 24px;
+  right: 32px;
   color: #fff;
-  font-size: 36px;
+  background: none;
+  border: none;
+  font-size: 48px;
+  line-height: 1;
+  cursor: pointer;
   z-index: 100;
+  transition: transform 200ms ease;
+}
+
+.modal__exit:hover {
+  transform: scale(1.15);
 }
 /* 
 

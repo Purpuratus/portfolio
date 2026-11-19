@@ -57,3 +57,9 @@ function toggleModal() {
   isModalOpen = true;
   document.body.classList += " modal--open";
 }
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && isModalOpen) {
+    toggleModal();
+  }
+});

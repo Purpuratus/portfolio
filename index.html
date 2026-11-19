@@ -8,7 +8,7 @@
   <title>Julia Chan</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="./assets/logo.svg" type="image/x-icon">
-  <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
   <script src="index.js"></script>
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script type="text/javascript">
@@ -134,7 +134,7 @@
         </div>
       </div>
       <div class="modal__half modal__contact">
-        <i class="fas fa-times modal__exit click" onclick="toggleModal()"></i>
+        <button type="button" class="modal__exit click" onclick="toggleModal()" aria-label="Close">&times;</button>
         <h3 class="modal__title modal__title--contact">
           Let's have a chat!
         </h3>
@@ -185,7 +185,7 @@
         <ul class="project__list">
           <li class="project">
             <div class="project__wrapper">
-              <img src="./assets/cover-skinstric.svg" class="project__img" alt="Skinstric AI project preview">
+              <img src="./assets/skinstric.png" onerror="this.onerror=null;this.src='./assets/cover-skinstric.svg'" class="project__img" alt="Skinstric AI project preview">
               <div class="project__wrapper--bg"></div>
               <div class="project__description">
                 <h3 class="project__description--title">
@@ -221,7 +221,7 @@
 
           <li class="project">
             <div class="project__wrapper">
-              <img src="./assets/cover-summarist.svg" class="project__img" alt="Summarist project preview">
+              <img src="./assets/summarist.png" onerror="this.onerror=null;this.src='./assets/cover-summarist.svg'" class="project__img" alt="Summarist project preview">
               <div class="project__wrapper--bg"></div>
               <div class="project__description">
                 <h3 class="project__description--title">
@@ -257,7 +257,7 @@
 
           <li class="project">
             <div class="project__wrapper">
-              <img src="./assets/cover-ultraverse.svg" class="project__img" alt="Ultraverse project preview">
+              <img src="./assets/ultraverse.png" onerror="this.onerror=null;this.src='./assets/cover-ultraverse.svg'" class="project__img" alt="Ultraverse project preview">
               <div class="project__wrapper--bg"></div>
               <div class="project__description">
                 <h3 class="project__description--title">
@@ -267,7 +267,7 @@
                   React, CSS, JavaScript
                 </h4>
                 <p class="project__description--para">
-                  A responsive multi-section React front-end build focused on reusable components and a polished layout across screen sizes.
+                  The front end of an NFT marketplace for creating, selling and collecting digital items, with a search bar, an Explore page and a Connect wallet flow, built as a responsive React app.
                 </p>
                 <div class="project__description--links">
                   <a href="https://julia-internship.vercel.app" target="_blank" rel="noopener" class="project__description--link" aria-label="Ultraverse live demo">
@@ -293,7 +293,7 @@
 
           <li class="project">
             <div class="project__wrapper">
-              <img src="./assets/cover-reelfast.svg" class="project__img" alt="ReelFast project preview">
+              <img src="./assets/reelfast.png" onerror="this.onerror=null;this.src='./assets/cover-reelfast.svg'" class="project__img" alt="ReelFast project preview">
               <div class="project__wrapper--bg"></div>
               <div class="project__description">
                 <h3 class="project__description--title">
@@ -303,7 +303,7 @@
                   JavaScript, OMDb API
                 </h4>
                 <p class="project__description--para">
-                  A movie search app powered by the OMDb API. Search any title, sort the results and open a full details view for each film.
+                  A fast movie search app powered by the OMDb API. Look up any movie, show or episode, sort the results and open a full details view for each title.
                 </p>
                 <div class="project__description--links">
                   <a href="https://movie2-ia4l.vercel.app" target="_blank" rel="noopener" class="project__description--link" aria-label="ReelFast live demo">
@@ -329,7 +329,7 @@
 
           <li class="project">
             <div class="project__wrapper">
-              <img src="./assets/cover-treact.svg" class="project__img" alt="Treact Clone project preview">
+              <img src="./assets/treact.png" onerror="this.onerror=null;this.src='./assets/cover-treact.svg'" class="project__img" alt="Treact Clone project preview">
               <div class="project__wrapper--bg"></div>
               <div class="project__description">
                 <h3 class="project__description--title">
